@@ -162,9 +162,10 @@
           I'm Zohaib, a self-driven Computer Science student focused on AI/ML engineering and
           full-stack development. I build end-to-end AI-powered applications — from training and
           evaluating machine learning models to shipping them inside real, production-style
-          systems. Recent work includes an AI-based interview preparation platform, a voice
-          assistant that integrates the Gemini API with function calling and speech recognition,
-          and ML models for tasks like survival and default prediction.
+          systems. Recent work includes a RAG-powered talent search engine for recruiters, a PDF
+          question-answering system with a local LLM, an AI-based interview preparation platform, a
+          voice assistant that integrates the Gemini API with function calling and speech
+          recognition, and ML models for sentiment, news-category, survival and default prediction.
         </p>
         <p class="muted reveal" style="margin-top: 12px;">
           Alongside AI/ML, I'm comfortable across the MERN stack — building full-stack apps with
@@ -206,26 +207,28 @@
 
       <div class="skill-groups reveal">
         <div class="skill-group">
-          <h3 class="skill-group-title">Frontend</h3>
+          <h3 class="skill-group-title">AI &amp; LLM</h3>
           <div class="skill-tags">
-            <span class="skill-tag">HTML</span>
-            <span class="skill-tag">CSS</span>
-            <span class="skill-tag">JavaScript</span>
-            <span class="skill-tag">React.js</span>
-            <span class="skill-tag">Bootstrap</span>
+            <span class="skill-tag">RAG</span>
+            <span class="skill-tag">Sentence Transformers</span>
+            <span class="skill-tag">ChromaDB</span>
+            <span class="skill-tag">BM25 / Hybrid Search</span>
+            <span class="skill-tag">Ollama</span>
+            <span class="skill-tag">Groq API</span>
+            <span class="skill-tag">Gemini API</span>
+            <span class="skill-tag">Prompt Engineering</span>
           </div>
         </div>
         <div class="skill-group">
-          <h3 class="skill-group-title">Backend &amp; Database</h3>
+          <h3 class="skill-group-title">Deep Learning &amp; NLP</h3>
           <div class="skill-tags">
-            <span class="skill-tag">Node.js</span>
-            <span class="skill-tag">Express.js</span>
-            <span class="skill-tag">MongoDB</span>
-            <span class="skill-tag">REST APIs</span>
-            <span class="skill-tag">JWT Auth</span>
-            <span class="skill-tag">MERN Stack</span>
-            <span class="skill-tag">Java</span>
-            <span class="skill-tag">JDBC + MySQL</span>
+            <span class="skill-tag">PyTorch</span>
+            <span class="skill-tag">TensorFlow</span>
+            <span class="skill-tag">Neural Networks</span>
+            <span class="skill-tag">CNNs</span>
+            <span class="skill-tag">Transformers</span>
+            <span class="skill-tag">NLTK</span>
+            <span class="skill-tag">TF-IDF</span>
           </div>
         </div>
         <div class="skill-group">
@@ -242,9 +245,35 @@
           </div>
         </div>
         <div class="skill-group">
+          <h3 class="skill-group-title">Backend &amp; Database</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Express.js</span>
+            <span class="skill-tag">Flask</span>
+            <span class="skill-tag">FastAPI</span>
+            <span class="skill-tag">MongoDB</span>
+            <span class="skill-tag">REST APIs</span>
+            <span class="skill-tag">JWT Auth</span>
+            <span class="skill-tag">MERN Stack</span>
+            <span class="skill-tag">Java</span>
+            <span class="skill-tag">JDBC + MySQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title">Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">React.js</span>
+            <span class="skill-tag">Bootstrap</span>
+          </div>
+        </div>
+        <div class="skill-group">
           <h3 class="skill-group-title">Tools</h3>
           <div class="skill-tags">
             <span class="skill-tag">Git &amp; GitHub</span>
+            <span class="skill-tag">Vercel</span>
           </div>
         </div>
       </div>
@@ -257,6 +286,139 @@
       <p class="section-eyebrow reveal">What I've built</p>
       <h2 id="projects-heading" class="section-title reveal">Projects</h2>
 
+      <h3 class="projects-subtitle reveal">Featured AI / ML projects</h3>
+      <div class="projects-grid projects-grid--featured">
+
+        <article class="project-card reveal" aria-label="RAG-Powered Talent Search Engine project">
+          <div class="project-thumb">
+            <div class="thumb-art thumb-art--a" role="img" aria-label="RAG-Powered Talent Search Engine: P@3 0.83, vs 0.64 semantic-only · 12 test queries">
+              <span class="thumb-art-kicker">RAG · Hybrid search</span>
+              <span class="thumb-art-stat">P@3 0.83</span>
+              <span class="thumb-art-label">vs 0.64 semantic-only · 12 test queries</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">RAG</span>
+              <span class="tag">ChromaDB</span>
+              <span class="tag">Sentence Transformers</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">LLM</span>
+            </div>
+            <h3 class="project-title">RAG-Powered Talent Search Engine</h3>
+            <p class="muted project-desc">
+              Recruiter-facing search engine that retrieves and ranks resumes from plain-English requests using hybrid semantic + BM25 retrieval, then explains each match with an LLM grounded in the resume text. It also screens uploaded PDF/DOCX CVs and has a blind mode that hides names and personal details. Hybrid retrieval reached P@3 0.83 vs 0.64 for semantic-only on 12 test queries (keyword-based relevance).
+            </p>
+            <div class="project-links">
+              <a class="btn btn-sm btn-outline" href="https://github.com/xizohaib/RAG-Powered-talent-search" target="_blank" rel="noopener noreferrer"
+                aria-label="View RAG-Powered Talent Search Engine on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" aria-label="AI PDF Question-Answering System project">
+          <div class="project-thumb">
+            <div class="thumb-art thumb-art--b" role="img" aria-label="AI PDF Question-Answering System: 93.3% Hit@5, 0.822 MRR · 0.049 s average retrieval">
+              <span class="thumb-art-kicker">RAG · Local LLM</span>
+              <span class="thumb-art-stat">93.3% Hit@5</span>
+              <span class="thumb-art-label">0.822 MRR · 0.049 s average retrieval</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">RAG</span>
+              <span class="tag">Sentence Transformers</span>
+              <span class="tag">Ollama</span>
+              <span class="tag">Streamlit</span>
+            </div>
+            <h3 class="project-title">AI PDF Question-Answering (RAG)</h3>
+            <p class="muted project-desc">
+              Ask questions about a PDF and get grounded answers from a local LLM (Ollama), with source pages, citation checks and abstention. Hybrid retrieval (TF-IDF + Sentence Transformers) is merged with Reciprocal Rank Fusion, with optional cross-encoder reranking. Reached 93.3% Hit@5 and 0.822 MRR on a labeled test set.
+            </p>
+            <div class="project-links">
+              <a class="btn btn-sm btn-outline" href="https://github.com/xizohaib/ai-pdf-qa-rag" target="_blank" rel="noopener noreferrer"
+                aria-label="View AI PDF Question-Answering (RAG) on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" aria-label="Amazon Review Sentiment Analysis project">
+          <div class="project-thumb">
+            <div class="thumb-art thumb-art--c" role="img" aria-label="Amazon Review Sentiment Analysis: 0.960 F1, Logistic Regression · ~568K reviews">
+              <span class="thumb-art-kicker">NLP · Sentiment</span>
+              <span class="thumb-art-stat">0.960 F1</span>
+              <span class="thumb-art-label">Logistic Regression · ~568K reviews</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">NLTK</span>
+              <span class="tag">TF-IDF</span>
+              <span class="tag">Scikit-Learn</span>
+            </div>
+            <h3 class="project-title">Amazon Review Sentiment Analysis</h3>
+            <p class="muted project-desc">
+              End-to-end binary sentiment classifier on ~568K Amazon Fine Food Reviews: NLTK preprocessing, TF-IDF features (20,000 unigrams + bigrams), and a comparison of Logistic Regression and Multinomial Naive Bayes. Logistic Regression performed best with 93.1% accuracy and 0.960 F1.
+            </p>
+            <div class="project-links">
+              <a class="btn btn-sm btn-outline" href="https://github.com/xizohaib/amazon-sentiment-analysis" target="_blank" rel="noopener noreferrer"
+                aria-label="View Amazon Review Sentiment Analysis on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" aria-label="News Category Classification project">
+          <div class="project-thumb">
+            <div class="thumb-art thumb-art--d" role="img" aria-label="News Category Classification: 92.2% accuracy, Linear SVM · best of 4 models">
+              <span class="thumb-art-kicker">NLP · Classification</span>
+              <span class="thumb-art-stat">92.2% accuracy</span>
+              <span class="thumb-art-label">Linear SVM · best of 4 models</span>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">NLP</span>
+              <span class="tag">Scikit-Learn</span>
+              <span class="tag">Streamlit</span>
+            </div>
+            <h3 class="project-title">News Category Classification</h3>
+            <p class="muted project-desc">
+              NLP pipeline that classifies news articles: EDA, text cleaning, vectorization, and a comparison of Logistic Regression, Naive Bayes, Linear SVM and Random Forest (best: Linear SVM at 92.2% accuracy). The trained model is served in a Streamlit app that predicts categories for unseen articles.
+            </p>
+            <div class="project-links">
+              <a class="btn btn-sm btn-outline" href="https://github.com/xizohaib/news-classifier-ml" target="_blank" rel="noopener noreferrer"
+                aria-label="View News Category Classification on GitHub">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z" />
+                  </svg>
+                View Code
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <h3 class="projects-subtitle reveal">More projects</h3>
       <div class="projects-grid">
 
         <!-- Project 1 -->

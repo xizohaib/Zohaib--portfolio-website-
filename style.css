@@ -710,6 +710,73 @@ body.light .nav {
   font-style: italic;
 }
 
+/* ── 12b. FEATURED PROJECTS ──────────────────────────────────── */
+.projects-subtitle {
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  margin: var(--space-10) 0 var(--space-4);
+}
+.projects-subtitle:first-of-type { margin-top: 0; }
+.projects-grid--featured { grid-template-columns: repeat(2, 1fr); }
+.projects-grid--featured .project-thumb { aspect-ratio: 21/9; }
+
+/* Gradient thumbnails for projects without a screenshot (swap for an <img> any time) */
+.thumb-art {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: var(--space-2);
+  padding: var(--space-6);
+  overflow: hidden;
+  color: #fff;
+  background: linear-gradient(135deg, #4338CA 0%, #6366F1 55%, #0891B2 140%);
+  transition: transform 400ms var(--ease);
+}
+.thumb-art::before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  right: -60px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+}
+.thumb-art--b { background: linear-gradient(135deg, #5B21B6 0%, #7C3AED 55%, #BE185D 140%); }
+.thumb-art--c { background: linear-gradient(135deg, #0F766E 0%, #0D9488 55%, #4F46E5 140%); }
+.thumb-art--d { background: linear-gradient(135deg, #7C2D12 0%, #C2410C 55%, #BE185D 140%); }
+.project-card:hover .thumb-art { transform: scale(1.04); }
+.thumb-art-kicker {
+  position: relative;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.88;
+}
+.thumb-art-stat {
+  position: relative;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3.2vw, 2.5rem);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+.thumb-art-label {
+  position: relative;
+  max-width: 30ch;
+  font-size: var(--fs-sm);
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 0.92;
+}
+
 /* ── 13. CERTIFICATIONS ──────────────────────────────────────── */
 .certs-grid {
   display: flex;

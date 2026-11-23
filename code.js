@@ -112,11 +112,11 @@
       ".contact-grid",
     ];
     staggerParents.forEach((selector) => {
-      const parent = document.querySelector(selector);
-      if (!parent) return;
-      const children = parent.querySelectorAll(".reveal");
-      children.forEach((el, i) => {
-        el.dataset.delay = i;
+      document.querySelectorAll(selector).forEach((parent) => {
+        const children = parent.querySelectorAll(".reveal");
+        children.forEach((el, i) => {
+          el.dataset.delay = i;
+        });
       });
     });
   }
